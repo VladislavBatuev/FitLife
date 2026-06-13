@@ -1,8 +1,11 @@
 import sys
-import const as ct # Были добавлены константы через сторонний файл
+
+# Были добавлены константы через сторонний файл
+import const as ct
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stdin.reconfigure(encoding='utf-8')
+
 
 def greetings():
     """Обрабатывает ввод имени и возраста пользователя."""
@@ -16,7 +19,7 @@ def greetings():
 def bmi_calc():
     """Рассчитывает ИМТ и норму воды."""
     user_weight = input('Введите ваш вес(кг): ')
-    user_weight = float(user_weight.replace(',', '.'))  # Вместо просьбы о не использовании запятых был использован не совсем знакомый метод replace
+    user_weight = float(user_weight.replace(',', '.'))
     user_height = input('Введите ваш рост(м): ')
     user_height = float(user_height.replace(',', '.'))
     bmi = user_weight / (user_height ** 2)
